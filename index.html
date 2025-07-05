@@ -1,44 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alen Christo | UNEXPECTED.ltd</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fefefe;
+      color: #444;
+    }
+
+    header {
+      background-color: #f6f4f9;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #b48ead;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #b48ead;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #b48ead;
+      text-align: center;
+    }
+
+    section p {
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #f6f4f9;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .service-card {
+      background-color: #fafafa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .contact-form button {
+      background-color: #b48ead;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #a26f95;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to AlechriX Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the homepage of the website.</p>
-        </section>
-        
-        <section id="about">
-            <h2>About</h2>
-            <p>I am Adipoli!.</p>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <h3>+91 7561096719</h3>
-            <h3>alenchristo01@gmail.com</h3>
-            <p>Feel free to reach out!</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 My Simple Website</p>
-    </footer>
+
+  <header>
+    <h1>UNEXPECTED.ltd</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome</h2>
+    <p>Hello, I'm <strong>Alen Christo</strong>. Welcome to my aesthetic space under <strong>UNEXPECTED.ltd</strong> where creativity meets elegance.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a tech enthusiast and designer who believes in minimal, pastel aesthetics and purposeful creations. Here I showcase my projects, ideas, and services that align with clarity and innovation.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x300/?pastel" alt="Pastel Aesthetic">
+      <img src="https://source.unsplash.com/400x300/?minimal" alt="Minimal Design">
+      <img src="https://source.unsplash.com/400x300/?creative" alt="Creative Work">
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Web Design</h3>
+        <p>Clean, responsive, and aesthetic websites tailored to your vision.</p>
+      </div>
+      <div class="service-card">
+        <h3>Branding</h3>
+        <p>Unique brand identities that stand out with minimal elegance.</p>
+      </div>
+      <div class="service-card">
+        <h3>Creative Direction</h3>
+        <p>Guiding visual storytelling for projects and digital media.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Alen Christo | UNEXPECTED.ltd. All rights reserved.
+  </footer>
+
 </body>
 </html>
